@@ -1,8 +1,4 @@
-import { useState } from "react";
-
-export default function Viewer() {
-  const [count, setCount] = useState(0);
-
+export default function Viewer({ count }) {
   return (
     <div>
       <div>Current Counts :</div>
