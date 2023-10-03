@@ -3,19 +3,13 @@ import "./App.css";
 import Viewer from "./components/Viewer";
 import Controller from "./components/controller";
 import Even from "./components/Even";
+import useUpdate from "./hooks/useUpdate";
 
 function App() {
   const [count, setCount] = useState(0);
   const [text, setText] = useState("");
 
-  const isMountRef = useRef(false);
-  useEffect(() => {
-    if (!isMountRef.current) {
-      isMountRef.current = true;
-      return;
-    }
-    console.log("update!");
-  });
+  useUpdate();
 
   useEffect(() => {
     console.log("업뎃");
