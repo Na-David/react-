@@ -14,14 +14,6 @@ function App() {
     console.log("app updated");
   });
 
-  useEffect(() => {
-    console.log("업뎃");
-  });
-
-  useEffect(() => {
-    console.log("업뎃");
-  });
-
   const onClickButton = (value) => {
     setCount(count + value);
   };
