@@ -1,5 +1,18 @@
-.TodoList input {
+.TodoList > input {
     border: none;
-    border-bottom: 1px solid grey;
-    flex: 1;
+    border-bottom: 1px solid rgb(220,220,220);
+    width: 100%;
+    padding: 15px 0;
+    margin-bottom: 20px;
+}
+
+.TodoList > input:focus {
+    outline: none;
+    border-bottom: 1px solid #1f93ff;
+}
+
+.TodoList .todos_wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
