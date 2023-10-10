@@ -1,8 +1,12 @@
 import { useState } from "react";
 import "./TodoEditor.css";
 
-export default function TodoEditor() {
+export default function TodoEditor({ onCreate }) {
   const [todo, setTodo] = useState("");
+
+  const onClick = () => {
+    onCreate(todo);
+  };
 
   const onChangeTodo = (e) => {
     setTodo(e.target.value);
@@ -11,7 +15,7 @@ export default function TodoEditor() {
   return (
     <div className="TodoEditor">
       <input value={todo} onChange={onChangeTodo} placeholder="New Todo..." />
-      <button>Confirm</button>
+      <button onClick={onClick}>Add</button>
     </div>
   );
 }
