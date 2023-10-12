@@ -14,9 +14,9 @@ export default function TodoList({ todos }) {
       <h4>Todos</h4>
       <input value={search} onChange={onChangeSearch} placeholder="Search.." />
       <div className="todos_wrapper">
-        <TodoItem />
-        <TodoItem />
-        <TodoItem />
+        {todos.map((todos) => (
+          <div>{todos.content}</div>
+        ))}
       </div>
     </div>
   );
