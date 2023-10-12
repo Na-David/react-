@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./TodoList.css";
 import TodoItem from "./TodoItem";
 
-export default function TodoList() {
+export default function TodoList({ todos }) {
   const [search, setSearch] = useState("");
 
   const onChangeSearch = (e) => {
