@@ -13,11 +13,7 @@ export default function TodoList({ todos }) {
     <div className="TodoList">
       <h4>Todos</h4>
       <input value={search} onChange={onChangeSearch} placeholder="Search.." />
-      <div className="todos_wrapper">
-        {todos.map((todos) => (
-          <div>{todos.content}</div>
-        ))}
-      </div>
+      <div className="todos_wrapper"></div>
     </div>
   );
 }
