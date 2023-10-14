@@ -18,12 +18,12 @@ export default function TodoEditor({ onCreate }) {
     setTodo(e.target.value);
   };
 
-  const onKeyDown = (e) => {
-    if (e.keyCode === 13) {
-      // 13 === enter
-      onClick();
-    }
-  };
+  // const onKeyDown = (e) => {
+  //   if (e.keyCode === 13) {
+  //     // 13 === enter
+  //     onClick();
+  //   }
+  // };
 
   return (
     <div className="TodoEditor">
