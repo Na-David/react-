@@ -8,12 +8,20 @@ export default function TodoList({ todos }) {
   const onChangeSearch = (e) => {
     setSearch(e.target.value);
   };
+
+  const filterTodos = () => {
+    if (search === "") {
+      return todos;
+    }
+    return todos.filter((todo) => todo.content.includes(search));
+  };
+
   return (
     <div className="TodoList">
       <h4>Todos</h4>
       <input value={search} onChange={onChangeSearch} placeholder="Search.." />
       <div className="todos_wrapper">
-        {todos.map((todo) => (
+        {filterTodos.map((todo) => (
           <TodoItem key={todo.id} {...todo} />
         ))}
       </div>
