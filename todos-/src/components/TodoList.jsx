@@ -15,7 +15,7 @@ export default function TodoList({ todos }) {
       <input value={search} onChange={onChangeSearch} placeholder="Search.." />
       <div className="todos_wrapper">
         {todos.map((todo) => (
-          <TodoItem {...todo} />
+          <TodoItem key={todo.id} {...todo} />
         ))}
       </div>
     </div>
