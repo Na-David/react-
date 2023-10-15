@@ -1,6 +1,6 @@
-import { useState } from "react";
 import "./TodoList.css";
 import TodoItem from "./TodoItem";
+import { useState } from "react";
 
 export default function TodoList({ todos }) {
   const [search, setSearch] = useState("");
@@ -8,7 +8,6 @@ export default function TodoList({ todos }) {
   const onChangeSearch = (e) => {
     setSearch(e.target.value);
   };
-
   return (
     <div className="TodoList">
       <h4>Todos</h4>
