@@ -10,9 +10,9 @@ export default function TodoList({ todos }) {
   };
 
   const filterTodos = () => {
-    if (search === "") {
-      return todos;
-    }
+    // if (search === "") {
+    //   return todos;
+    // }
     return todos.filter((todo) =>
       todo.content.toLowerCase().includes(search.toLowerCase())
     );
