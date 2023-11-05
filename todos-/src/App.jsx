@@ -49,6 +49,7 @@ function App() {
             isDone: !todo.isDone,
           };
         } else {
+          return todo;
         }
       })
     );
