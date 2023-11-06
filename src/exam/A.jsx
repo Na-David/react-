@@ -6,6 +6,7 @@ export default function A() {
   const onDecrease = () => {
     setCount(count - 1);
   };
+
   const onIncrease = () => {
     setCount(count + 1);
   };
