@@ -1,7 +1,12 @@
 import { useReducer } from "react";
 
 function reducer(state, action) {
-  return 100;
+  if (action.type === "DECREASE") {
+    return state - action.data;
+  }
+  if (action.type === "INCREASE") {
+    return state + action.data;
+  }
 }
 
 export default function B() {
@@ -21,7 +26,16 @@ export default function B() {
         >
           -
         </button>
-        <button>+</button>
+        <button
+          onClick={() => {
+            dispatch({
+              type: "INCREASE",
+              data: 1,
+            });
+          }}
+        >
+          +
+        </button>
       </div>
     </div>
   );
