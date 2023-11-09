@@ -29,6 +29,11 @@ function reducer(state, action) {
     case "CREATE": {
       return [...state, action.data];
     }
+    case "UPDATE": {
+      return state.map((it) =>
+        it.id === action.data ? { ...it, isDone: !it.isDone } : it
+      );
+    }
   }
 }
 
@@ -46,10 +51,13 @@ function App() {
         createdDate: new Date().getTime(),
       },
     });
-    // setTodos([...todos, newTodo]);
   };
 
   const onUpdate = (targetId) => {
+    dispatch({
+      type: "UPDATE",
+      data: targetId,
+    });
     // setTodos(
     //   todos.map((todo) =>
     //     todo.id === targetId ? { ...todo, isDone: !todo.isDone } : todo
