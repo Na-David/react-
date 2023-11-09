@@ -34,6 +34,9 @@ function reducer(state, action) {
         it.id === action.data ? { ...it, isDone: !it.isDone } : it
       );
     }
+    case "DELETE": {
+      return state.filter((it) => it.id !== action.data);
+    }
   }
 }
 
@@ -66,6 +69,10 @@ function App() {
   };
 
   const onDelete = (targetId) => {
+    dispatch({
+      type: "DELETE",
+      data: targetId,
+    });
     // setTodos(todos.filter((todo) => todo.id !== targetId));
   };
 
