@@ -74,7 +74,6 @@ function App() {
       type: "DELETE",
       data: targetId,
     });
-    // setTodos(todos.filter((todo) => todo.id !== targetId));
   }, []);
 
   return (
