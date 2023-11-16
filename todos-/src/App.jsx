@@ -79,7 +79,7 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <TodoContext.Provider>
+      <TodoContext.Provider value={{ todos, onCreate, onUpdate, onDelete }}>
         <TodoEditor onCreate={onCreate} />
         <TodoList todos={todos} onUpdate={onUpdate} onDelete={onDelete} />
       </TodoContext.Provider>
