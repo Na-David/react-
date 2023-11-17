@@ -3,7 +3,7 @@ import "./App.css";
 import Header from "./components/Header";
 import TodoEditor from "./components/TodoEditor";
 import TodoList from "./components/TodoList";
-import { TodoContext } from "../../src/TodoContext";
+import { TodoStateContext, TodoDispatchContext } from "../../src/TodoContext";
 
 const mockData = [
   {
@@ -79,10 +79,12 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <TodoContext.Provider value={{ todos, onCreate, onUpdate, onDelete }}>
-        <TodoEditor onCreate={onCreate} />
-        <TodoList />
-      </TodoContext.Provider>
+      <TodoStateContext.Provider value={todos}>
+        <TodoDispatchContext.Provider value={(onCreate, onDelete, onUpdate)}>
+          <TodoEditor onCreate={onCreate} />
+          <TodoList />
+        </TodoDispatchContext.Provider>
+      </TodoStateContext.Provider>
     </div>
   );
 }
