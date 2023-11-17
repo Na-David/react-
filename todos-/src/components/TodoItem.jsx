@@ -1,9 +1,9 @@
-import { TodoContext } from "../../../src/TodoContext";
+import { TodoDispatchContext } from "../../../src/TodoContext";
 import "./TodoItem.css";
 import { memo, useContext } from "react";
 
 function TodoItem({ id, isDone, createdDated, content }) {
-  const { onUpdate, onDelete } = useContext(TodoContext);
+  const { onUpdate, onDelete } = useContext(TodoDispatchContext);
 
   const onChangeCheckbox = () => {
     onUpdate(id);

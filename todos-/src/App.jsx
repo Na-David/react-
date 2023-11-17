@@ -1,4 +1,4 @@
-import { useReducer, useRef, useCallback } from "react";
+import { useReducer, useRef, useCallback, useMemo } from "react";
 import "./App.css";
 import Header from "./components/Header";
 import TodoEditor from "./components/TodoEditor";
@@ -76,12 +76,20 @@ function App() {
     });
   }, []);
 
+  const memoizedDispatches = useMemo(() => {
+    return {
+      onCreate,
+      onDelete,
+      onUpdate,
+    };
+  }, []);
+
   return (
     <div className="App">
       <Header />
       <TodoStateContext.Provider value={todos}>
-        <TodoDispatchContext.Provider value={(onCreate, onDelete, onUpdate)}>
-          <TodoEditor onCreate={onCreate} />
+        <TodoDispatchContext.Provider value={memoizedDispatches}>
+          <TodoEditor />
           <TodoList />
         </TodoDispatchContext.Provider>
       </TodoStateContext.Provider>
