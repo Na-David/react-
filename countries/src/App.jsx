@@ -1,11 +1,15 @@
 import "./App.css";
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route, Link, useNavigate } from "react-router-dom";
 import Search from "./pages/Search";
 import Home from "./pages/Home";
 import Country from "./pages/Country";
 import NotFound from "./pages/NotFount";
 
 function App() {
+  const nav = useNavigate();
+  const onClick = () => {
+    nav("/search");
+  };
   return (
     <>
       <Routes>
