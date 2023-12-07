@@ -2,12 +2,12 @@ import style from "./Layout.module.css";
 
 export default function Layout({ children }) {
   return (
-    <div className="Layout">
-      <header>
+    <div>
+      <header className={style.header}>
         <div> 🌏 World Database</div>
         {/* ctrl+cmd+space=emoji     */}
       </header>
-      <main>{children}</main>
+      <main className={style.main}>{children}</main>
     </div>
   );
 }
