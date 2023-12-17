@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import { fetchCountries } from "../api";
+import CountryList from "../components/CountryList";
 
 export default function Home() {
-  const [countires, setCountries] = useState([]);
+  const [countries, setCountries] = useState([]);
 
   const setInitData = async () => {
     const data = await fetchCountries();
@@ -13,5 +14,9 @@ export default function Home() {
     setInitData();
   }, []);
 
-  return <div>Home</div>;
+  return (
+    <div>
+      <CountryList countries={countries} />
+    </div>
+  );
 }
