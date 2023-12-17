@@ -16,9 +16,16 @@ export default function Searchbar() {
     }
   };
 
+  const onKeyDown = (e) => {
+    if (e.keyCode === 13) {
+      onClickSearch();
+    }
+  };
+
   return (
     <div className={style.container}>
       <input
+        onKeyDown={onKeyDown}
         value={search}
         onChange={onChangeSearch}
         placeholder="Enter a keyword"
