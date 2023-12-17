@@ -1,3 +1,15 @@
-export default function CountryItem() {
-  return <div>Country Items</div>;
+export default function CountryItem({
+  code,
+  commonName,
+  flagEmoji,
+  flagImg,
+  population,
+  region,
+  capital,
+}) {
+  return (
+    <div>
+      {commonName},{flagEmoji}
+    </div>
+  );
 }
