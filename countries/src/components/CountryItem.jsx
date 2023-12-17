@@ -1,3 +1,5 @@
+import style from "./CountryItem.module.css";
+
 export default function CountryItem({
   code,
   commonName,
@@ -8,8 +10,15 @@ export default function CountryItem({
   capital,
 }) {
   return (
-    <div>
-      {commonName},{flagEmoji}
+    <div className={style.container}>
+      <img className={style.flag_img} src={flagImg} />
+      <div className={style.content}>
+        <div>
+          {flagEmoji} {commonName}
+        </div>
+        <div>Region: {region}</div>
+        <div>Capital: {capital.join(",")}</div>
+      </div>
     </div>
   );
 }
