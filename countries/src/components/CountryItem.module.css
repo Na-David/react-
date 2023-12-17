@@ -11,3 +11,16 @@
     height: 150px;
     object-fit: cover;
 }
+
+.name {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 1px;
+}
+
+.content {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
