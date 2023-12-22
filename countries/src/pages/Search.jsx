@@ -1,6 +1,7 @@
 import { useSearchParams } from "react-router-dom";
 import { fetchSearchResults } from "../api";
 import { useEffect, useState } from "react";
+import Searchbar from "../components/Searchbar";
 
 export default function Search() {
   const [searchParams, setSearchParams] = useSearchParams();
