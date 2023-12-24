@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import { fetchCountry } from "../api";
 import { useEffect, useState } from "react";
+import style from "./Country.module.css";
 
 export default function Country() {
   const params = useParams();
@@ -15,5 +16,18 @@ export default function Country() {
     setInitData();
   }, [params.code]);
 
-  return <div>Country : {params.code}</div>;
+  if (!country) {
+    return <div>Loading ...</div>;
+  }
+
+  return (
+    <div className={style.container}>
+      <div className={style.header}>
+        <div className={style.commonName}>
+          {country.flagEmoji} &nbsp; {country.commonName}
+        </div>
+        <div className={style.officialName}>{country.officialName}</div>
+      </div>
+    </div>
+  );
 }
