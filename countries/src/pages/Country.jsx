@@ -35,6 +35,19 @@ export default function Country() {
       <div className={style.body}>
         <div>
           <b>Code :</b>&nbsp;{country.code}
+          {/* &nbsp = 공백 */}
+        </div>
+        <div>
+          <b>Capital :</b>&nbsp;{country.capital.join(", ")}
+        </div>
+        <div>
+          <b>Region :</b>&nbsp;{country.region}
+        </div>
+        <div>
+          <b>Map :</b>&nbsp;
+          <a target="_blank" href={country.googleMapURL}>
+            {country.googleMapURL}
+          </a>
         </div>
       </div>
     </div>
