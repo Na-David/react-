@@ -28,6 +28,15 @@ export default function Country() {
         </div>
         <div className={style.officialName}>{country.officialName}</div>
       </div>
+      <img
+        src={country.flagImg}
+        alt={`${country.commonName}'s Country Image`}
+      />
+      <div className={style.body}>
+        <div>
+          <b>Code :</b>&nbsp;{country.code}
+        </div>
+      </div>
     </div>
   );
 }
