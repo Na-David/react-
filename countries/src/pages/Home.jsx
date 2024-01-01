@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { fetchCountries } from "../api";
 import CountryList from "../components/CountryList";
 import Searchbar from "../components/Searchbar";
-import style from "./home.module.css";
+import style from "./Home.module.css";
 
 export default function Home() {
   const [countries, setCountries] = useState([]);
