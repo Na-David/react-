@@ -17,7 +17,7 @@ export default function Home() {
   }, []);
 
   if (!countries) {
-    return <div>Loading ...</div>;
+    return <div>Loading ... ...</div>;
   }
 
   return (

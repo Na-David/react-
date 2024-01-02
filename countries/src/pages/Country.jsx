@@ -17,7 +17,7 @@ export default function Country() {
   }, [params.code]);
 
   if (!country) {
-    return <div>Loading ...</div>;
+    return <div>Loading ... ...</div>;
   }
 
   return (
