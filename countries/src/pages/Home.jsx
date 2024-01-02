@@ -16,6 +16,10 @@ export default function Home() {
     setInitData();
   }, []);
 
+  if (!countries) {
+    return <div>Loading ...</div>;
+  }
+
   return (
     <div className={style.container}>
       <Searchbar />
