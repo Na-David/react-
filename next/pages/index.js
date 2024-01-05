@@ -7,7 +7,8 @@ export default function Home() {
   const router = useRouter();
 
   const onClickButton = () => {
-    router.push("/search");
+    router.push("/search");//마찬가지로 URL 오브젝트도 가능
+    // replace(뒤로가기방지페이지), reload, back 등등 많이있슴
   }
 
   return <div>
