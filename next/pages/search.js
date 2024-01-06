@@ -1,7 +1,15 @@
+import { fetchSearchResults } from "@/api";
 import SubLayout from "@/components/SubLayout"
 
 export default function Search() {
-    return <div>Search Page</div>
+    return (
+
+    )
 }
 
 Search.Layout = SubLayout;
+
+export const getServerSideProps = async() =>{
+
+
+};
