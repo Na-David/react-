@@ -1,3 +1,4 @@
+import SubLayout from "@/components/SubLayout";
 import { useRouter } from "next/router"
 
 export default function Country(){
@@ -8,3 +9,5 @@ const code = router.query.code;
 
     return <div>COuntry detail == {code}</div>
 }
+
+Country.Layout = SubLayout;
