@@ -2,11 +2,17 @@
 
 import '@/styles/globals.css'
 import Layout from '@/components/Layout';
+import SubLayout from '@/components/SubLayout';
 
 export default function App({ Component, pageProps }) {
+
+
+  console.log(Component.Layout)
   return (
     <Layout>
-      <Component {...pageProps} />
+      <Component.Layout>
+        <Component {...pageProps} />
+      </Component.Layout>
     </Layout>
     );
 }
